@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NimbusCloud | Enterprise Infrastructure Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">⚡ NimbusCloud</div>
+        <div class="nav-controls">
+            <select id="currencySelector">
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="PKR">PKR (₨)</option>
+            </select>
+            <button id="cartBtn" class="cart-btn">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <h1>High-Performance Cloud Assets</h1>
+            <p>Deploy scalable architecture packages straight to your infrastructure.</p>
+            <div class="search-filter-bar">
+                <input type="text" id="searchInput" placeholder="Search infrastructure assets...">
+                <div class="category-filters">
+                    <button class="filter-chip active" data-category="all">All</button>
+                    <button class="filter-chip" data-category="Compute">Compute</button>
+                    <button class="filter-chip" data-category="Database">Database</button>
+                    <button class="filter-chip" data-category="Security">Security</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-grid" id="productGrid">
+            <!-- Dynamically populated products -->
+        </section>
+    </main>
+
+    <!-- Slide-out Cart Drawer -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Deployment Cart</h2>
+            <button id="closeCart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalAmount">$0.00</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Proceed to Provisioning</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
